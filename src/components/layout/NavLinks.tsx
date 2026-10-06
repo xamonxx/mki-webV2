@@ -34,7 +34,7 @@ export function NavLinks() {
   }, []);
 
   return (
-    <nav className="hidden min-w-0 items-center justify-center gap-1 xl:flex">
+    <nav className="hidden items-center justify-center gap-1 xl:flex">
       {navigationItems.map((item) => {
         const id = item.href.replace("/#", "");
         const isActive = id === active;
@@ -43,13 +43,13 @@ export function NavLinks() {
             href={item.href}
             key={item.href}
             className={cn(
-              "relative whitespace-nowrap rounded-full px-3 py-2 text-sm font-bold transition hover:bg-secondary hover:text-foreground 2xl:px-4",
+              "relative whitespace-nowrap rounded-full px-2 py-2 text-sm font-bold transition hover:bg-secondary hover:text-foreground 2xl:px-3",
               isActive ? "text-foreground" : "text-mki-gray",
             )}
           >
             {item.label}
             {isActive ? (
-              <span className="absolute inset-x-3 -bottom-0.5 h-[2px] rounded-full bg-mki-orange 2xl:inset-x-4" />
+              <span className="absolute inset-x-2 -bottom-0.5 h-[2px] rounded-full bg-mki-orange 2xl:inset-x-3" />
             ) : null}
           </Link>
         );

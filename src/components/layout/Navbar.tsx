@@ -11,7 +11,7 @@ import { createWhatsAppLink } from "@/lib/whatsapp";
 export function Navbar() {
   return (
     <header className="fixed left-0 right-0 top-0 z-40 border-b border-border bg-background/85 backdrop-blur-xl dark:bg-background/90">
-      <div className="container grid h-[76px] grid-cols-[auto_auto] items-center justify-between gap-4 xl:grid-cols-[minmax(120px,auto)_1fr_auto]">
+      <div className="container grid h-[76px] max-w-[1400px] grid-cols-[auto_auto] items-center justify-between gap-4 xl:grid-cols-[minmax(120px,auto)_1fr_auto]">
         <Logo compact />
         <NavLinks />
         <div className="hidden items-center gap-3 justify-self-end xl:flex">
